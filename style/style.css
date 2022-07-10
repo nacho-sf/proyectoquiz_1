@@ -1,0 +1,521 @@
+@import url('https://fonts.googleapis.com/css2?family=Quintessential&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(5, 5, 31);
+    font-family: 'Quintessential', cursive;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    margin: 0px;
+}
+
+.quizBox {
+    background-image: url(../assets/img/quest-square-vertical-cell.png);
+    background-size: cover;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px 3px black;
+    width: 300px;
+    height: 565px;
+    overflow: wrap;
+    position: relative;
+    top: 30px;
+}
+
+.quizContent {
+    margin-top: 30px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+#question {
+    position: relative;
+    right: 20px;
+    width: 240px;
+    overflow: wrap;
+    padding: 0;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+    position: relative;
+    right: 40px;
+    width: 290px;
+}
+
+ul li {
+    font-size: 1.5rem;
+    margin: 1rem 1.5rem;
+}
+
+ul li a {
+    text-decoration: none;
+    color: white;
+    transition: 0.4s;
+}
+
+ul li a:hover {
+    cursor: pointer;
+    transition: text-shadow 0.4s;
+    text-shadow: 4px 2px 2px rgb(228, 97, 15);
+}
+
+ul li a:focus {
+    text-shadow: 4px 2px 2px rgb(228, 97, 15);
+}
+
+
+
+button {
+    background-image: url(../assets/img/button-square.jpg);
+    background-size: cover;
+    font-family: 'Quintessential', cursive;
+    color: #fff;
+    border: none;
+    display: block;
+    cursor: pointer;
+    font-size: 1.1rem;
+    padding: 1.3rem;
+    position: relative;
+    top: 45px;
+    height: 40px;
+    width: 120px;
+    padding: 0;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+    transition: 0.4s;
+}
+
+button:hover {
+    cursor: pointer;
+    transition: text-shadow 0.4s;
+    text-shadow: 4px 2px 2px rgb(228, 97, 15);
+}
+
+button:focus {
+    text-shadow: 4px 2px 2px rgb(228, 97, 15);
+}
+
+#result {
+    position: relative;
+    width: 260px;
+    text-align: center;
+    left: 20px;
+    top: 80px;
+}
+
+#reload {
+    position: relative;
+    top: 100px;
+    left: 85px;
+}
+
+
+
+/*********** MÓVILES EN HORIZONTAL ***********/
+
+@media screen and (orientation: landscape) {
+    body {
+        background-color: rgb(5, 5, 31);
+        font-family: 'Quintessential', cursive;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        overflow: hidden;
+        margin: 0px;
+    }
+    
+    .quizBox {
+        background-image: url(../assets/img/quest-square-horizontal-cell\ \(1\).png);
+        background-size: cover;
+        border-radius: 20px;
+        box-shadow: 5px 5px 5px 3px black;
+        width: 600px;
+        height: 300px;
+        overflow: wrap;
+        position: relative;
+        top: 20px;
+    }
+    
+    .quizContent {
+        margin-top: 30px;
+        margin-left: 20px;
+        margin-right: 50px;
+        padding-left: 15px;
+    }
+    
+    #question {
+        font-size: 1.3rem;
+        position: relative;
+        top: 0px;
+        left: 10px;
+        width: 520px;
+        overflow: wrap;
+        padding: 0;
+    }
+    
+    ul {
+        list-style-type: none;
+        position: relative;
+        left: 0px;
+        top: 5px;
+        width: 530px;
+    }
+    
+    ul li {
+        font-size: 1rem;
+        margin: 1rem 1.5rem;
+        padding-bottom: 5px;
+    }
+    
+    ul li a {
+        text-decoration: none;
+        color: white;
+        transition: 0.4s;
+    }
+    
+    ul li a:hover {
+        cursor: pointer;
+        transition: text-shadow 0.4s;
+        text-shadow: 4px 2px 2px rgb(228, 97, 15);
+    }
+    
+    ul li a:focus {
+        text-shadow: 4px 2px 2px rgb(228, 97, 15);
+    }
+
+    button {
+        background-image: url(../assets/img/button-square.jpg);
+        background-size: cover;
+        font-family: 'Quintessential', cursive;
+        color: #fff;
+        border: none;
+        display: block;
+        cursor: pointer;
+        font-size: 1.2rem;
+        padding: 1.3rem;
+        position: relative;
+        top: 30px;
+        height: 40px;
+        width: 120px;
+        padding: 0;
+        border-radius: 5px;
+        text-decoration: none;
+        color: white;
+        transition: 0.4s;
+    }
+    
+    button:hover {
+        cursor: pointer;
+        transition: text-shadow 0.4s;
+        text-shadow: 4px 2px 2px rgb(228, 97, 15);
+    }
+    
+    button:focus {
+        text-shadow: 4px 2px 2px rgb(228, 97, 15);
+    }
+
+    #result {
+        position: relative;
+        width: 260px;
+        text-align: center;
+        left: 175px;
+        top: 60px;
+    }
+    
+    #reload {
+        position: relative;
+        top: 65px;
+        left: 240px;
+    }
+}
+
+
+
+/*********** ESTILO PARA TABLETAS ***********/
+
+@media screen and (min-width: 768px) and (max-width: 1365px) {
+    body {
+        background-color: rgb(5, 5, 31);
+        font-family: 'Quintessential', cursive;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        overflow: hidden;
+        margin: 0px;
+    }
+    
+    .quizBox {
+        background-image: url(../assets/img/quest-square-horizontal.jpg);
+        background-size: cover;
+        border-radius: 20px;
+        box-shadow: 5px 5px 5px 3px black;
+        width: 776px;
+        height: 500px;
+        overflow: wrap;
+        position: relative;
+        top: 40px;
+    }
+    
+    .quizContent {
+        margin-top: 30px;
+        margin-left: 20px;
+        margin-right: 50px;
+        padding-left: 15px;
+    }
+    
+    #question {
+        font-size: 2rem;
+        position: relative;
+        top: 20px;
+        left: 30px;
+        width: 670px;
+        overflow: wrap;
+        padding: 0;
+    }
+    
+    ul {
+        list-style-type: none;
+        padding-left: 0;
+        position: relative;
+        left: 10px;
+        top: 25px;
+        width: 690px;
+    }
+    
+    ul li {
+        font-size: 1.5rem;
+        margin: 1rem 1.5rem;
+        padding-bottom: 15px;
+    }
+    
+    ul li a {
+        text-decoration: none;
+        color: white;
+        transition: 0.4s;
+    }
+    
+    ul li a:hover {
+        cursor: pointer;
+        transition: text-shadow 0.4s;
+        text-shadow: 4px 2px 2px rgb(228, 97, 15);
+    }
+    
+    ul li a:focus {
+        text-shadow: 4px 2px 2px rgb(228, 97, 15);
+    }
+
+    button {
+        background-image: url(../assets/img/button-square.jpg);
+        background-size: cover;
+        font-family: 'Quintessential', cursive;
+        color: #fff;
+        border: none;
+        display: block;
+        cursor: pointer;
+        font-size: 1.5rem;
+        padding: 1.3rem;
+        position: relative;
+        top: 90px;
+        height: 60px;
+        width: 180px;
+        padding: 0;
+        border-radius: 5px;
+        text-decoration: none;
+        color: white;
+        transition: 0.4s;
+    }
+    
+    button:hover {
+        cursor: pointer;
+        transition: text-shadow 0.4s;
+        text-shadow: 4px 2px 2px rgb(228, 97, 15);
+    }
+    
+    button:focus {
+        text-shadow: 4px 2px 2px rgb(228, 97, 15);
+    }
+
+    #result {
+        position: relative;
+        width: 350px;
+        font-size: 2rem;
+        text-align: center;
+        left: 210px;
+        top: 120px;
+    }
+    
+    #reload {
+        position: relative;
+        top: 160px;
+        left: 300px;
+    }
+}
+
+
+
+
+/********* ESTILO PARA PC ************/
+
+@media screen and (min-width: 1366px) {
+    body {
+        background-color: rgb(5, 5, 31);
+        font-family: 'Quintessential', cursive;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        overflow: hidden;
+        margin: 0px;
+    }
+    
+    .quizBox {
+        background-image: url(../assets/img/quest-square-horizontal.jpg);
+        background-size: cover;
+        border-radius: 20px;
+        box-shadow: 5px 5px 5px 3px black;
+        width: 776px;
+        height: 500px;
+        overflow: wrap;
+        position: relative;
+        top: 40px;
+    }
+    
+    .quizContent {
+        margin-top: 30px;
+        margin-left: 20px;
+        margin-right: 50px;
+        padding-left: 15px;
+    }
+    
+    #question {
+        font-size: 2rem;
+        position: relative;
+        top: 20px;
+        left: 30px;
+        width: 670px;
+        overflow: wrap;
+        padding: 0;
+    }
+    
+    ul {
+        list-style-type: none;
+        padding-left: 0;
+        position: relative;
+        left: 10px;
+        top: 25px;
+        width: 690px;
+    }
+    
+    ul li {
+        font-size: 1.5rem;
+        margin: 1rem 1.5rem;
+        padding-bottom: 15px;
+    }
+    
+    ul li a {
+        text-decoration: none;
+        color: white;
+        transition: 0.4s;
+    }
+    
+    ul li a:hover {
+        cursor: pointer;
+        transition: text-shadow 0.4s;
+        text-shadow: 4px 2px 2px rgb(228, 97, 15);
+    }
+    
+    ul li a:focus {
+        text-shadow: 4px 2px 2px rgb(228, 97, 15);
+    }
+
+    button {
+        background-image: url(../assets/img/button-square.jpg);
+        background-size: cover;
+        font-family: 'Quintessential', cursive;
+        color: #fff;
+        border: none;
+        display: block;
+        cursor: pointer;
+        font-size: 1.5rem;
+        padding: 1.3rem;
+        position: relative;
+        top: 90px;
+        height: 60px;
+        width: 180px;
+        padding: 0;
+        border-radius: 5px;
+        text-decoration: none;
+        color: white;
+        transition: 0.4s;
+    }
+    
+    button:hover {
+        cursor: pointer;
+        transition: text-shadow 0.4s;
+        text-shadow: 4px 2px 2px rgb(228, 97, 15);
+    }
+    
+    button:focus {
+        text-shadow: 4px 2px 2px rgb(228, 97, 15);
+    }
+
+    #result {
+        position: relative;
+        width: 260px;
+        text-align: center;
+        left: 250px;
+        top: 80px;
+    }
+    
+    #reload {
+        position: relative;
+        top: 100px;
+        left: 290px;
+    }
+
+}
+
+
+
+
+/*********** PANTALLA DE INICIO ***********/
+.init-block{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: space-around;
+    justify-content: center;
+    align-items: center;
+    margin-top:100px;
+}
+.img-portada{
+    width: 100%;
+    padding: 30px;
+}
+.botton-start{
+    font-family: 'Quintessential', cursive;
+    color: white;
+    background-image: url(../assets/img/button-square.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    width: 117px;
+    display: block;
+    height: 39px;
+    top: 20px;
+    padding-top: 5px;
+    font-size: 1.2rem;
+}
+
